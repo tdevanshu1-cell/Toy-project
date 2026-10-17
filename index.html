@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSLearn — JavaScript for Beginners</title>
+  <meta name="description" content="Learn JavaScript from scratch with interactive examples, tutorials, and hands-on code editors. Perfect for absolute beginners." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TOP HEADER -->
+  <header id="site-header">
+    <div class="header-left">
+      <button id="sidebar-toggle" aria-label="Toggle sidebar" title="Toggle Sidebar">&#9776;</button>
+      <a href="#" id="logo" onclick="loadTopic('home')">
+        <span class="logo-js">JS</span>Learn
+      </a>
+    </div>
+    <nav class="header-nav">
+      <a href="#" onclick="loadTopic('home')" class="nav-link">Home</a>
+      <a href="#" onclick="loadTopic('variables')" class="nav-link">Topics</a>
+      <a href="#" onclick="loadTopic('playground')" class="nav-link">Playground</a>
+    </nav>
+    <div class="header-right">
+      <input type="text" id="search-input" placeholder="Search topics…" autocomplete="off" />
+      <div id="search-dropdown" class="search-dropdown hidden"></div>
+    </div>
+  </header>
+
+  <div id="app-shell">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Getting Started</div>
+        <ul class="sidebar-list">
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('intro')" data-topic="intro">Introduction</a></li>
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('setup')" data-topic="setup">Setup &amp; Hello World</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Core Concepts</div>
+        <ul class="sidebar-list">
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('variables')" data-topic="variables">Variables</a></li>
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('datatypes')" data-topic="datatypes">Data Types</a></li>
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('operators')" data-topic="operators">Operators</a></li>
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('strings')" data-topic="strings">Strings</a></li>
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('numbers')" data-topic="numbers">Numbers</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Control Flow</div>
+        <ul class="sidebar-list">
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('conditionals')" data-topic="conditionals">If / Else</a></li>
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('switch')" data-topic="switch">Switch Statement</a></li>
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('loops')" data-topic="loops">Loops</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Functions &amp; Scope</div>
+        <ul class="sidebar-list">
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('functions')" data-topic="functions">Functions</a></li>
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('scope')" data-topic="scope">Scope</a></li>
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('arrow')" data-topic="arrow">Arrow Functions</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Data Structures</div>
+        <ul class="sidebar-list">
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('arrays')" data-topic="arrays">Arrays</a></li>
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('objects')" data-topic="objects">Objects</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-heading">The Browser</div>
+        <ul class="sidebar-list">
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('dom')" data-topic="dom">DOM Basics</a></li>
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('events')" data-topic="events">Events</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Tools</div>
+        <ul class="sidebar-list">
+          <li><a href="#" class="sidebar-link" onclick="loadTopic('playground')" data-topic="playground">&#9658; Playground</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main id="content-area">
+      <div id="content-inner"></div>
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <span><strong>JSLearn</strong> — Free JavaScript Tutorials for Beginners</span>
+      <span>Made with ❤️ and lots of <code>console.log()</code></span>
+    </div>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
