@@ -1,0 +1,10 @@
+# Compiled binaries
+*.exe
+*.out
+*.o
+
+# Codeforces competitive programming helper (cph) build artifacts
+.cph/
+
+# VS Code settings
+.vscode/
